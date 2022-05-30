@@ -7,6 +7,7 @@ export const hooks: Hooks = {
     const env = config({
       path: findConfig(".env") ?? undefined,
     });
-    Object.assign(scriptEnv, env.parsed);
+    console.log(env);
+    return Object.assign(scriptEnv, env.parsed);
   },
 };
